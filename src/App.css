@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;400&display=swap");
+
+/* Fonts */
+@font-face {
+  font-family: "Blanka";
+  src: url("./assets/fonts/Blanka-Regular.otf");
+}
+
+@font-face {
+  font-family: "Modernist-bold";
+  src: url("./assets/fonts/Sk-Modernist-Bold.otf");
+}
+
+@font-face {
+  font-family: "Modernist-Regular";
+  src: url("./assets/fonts/Sk-Modernist-Regular.otf");
+}
+
+@font-face {
+  font-family: "Modernist-Mono";
+  src: url("./assets/fonts/Sk-Modernist-Mono.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Modernist-Regular", sans-serif;
+  color: white;
+}
+
+body {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+/* links */
+/* .hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #d2fef3;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #00664c;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}*/
+
+/* .neonText {
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+} */
+
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa,
+      0 0 80px #0fa, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+/* Header Component */
+.header {
+  position: fixed; /* Set the position to fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+  z-index: 999;
+}
+
+.logo-header {
+  padding-top: 2rem;
+  width: 14rem;
+  height: 7rem;
+}
+
+.logo-a-tag{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+/* Navigation */
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 2rem;
+}
+
+.nav-links {
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 2rem;
+  font-family: "Blanka", sans-serif;
+  animation: flicker 1.5s infinite alternate;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.hero-img {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-text {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-navigation {
+  display: flex;
+  justify-content: center;
+}
+
+/* Styling for the navigation */
+.navigation {
+  position: fixed;
+  padding: 20px;
+  z-index: 1000;
+  transition: top 0.3s ease-in-out;
+  width: 100%;
+}
+
+/* Styling for the navigation in the bottom position */
+.navigation.bottom {
+  bottom: 0;
+  top: auto;
+}
+
+/* Styling for the navigation in the top-right position */
+/* .navigation.top-right {
+  top: 20px;
+  bottom: auto;
+  right: 20px;
+} */
+
+/* About section */
+.about-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: space-between;
+}
+
